@@ -7,7 +7,7 @@ metadata:
     app: godemo
 spec:
   containers:
-    - image: w22663/go-web-hello-world:v1
+    - image: w22663/go-web-hello-world:v0.1
       name: goapp
       ports:
         - containerPort: 28082
