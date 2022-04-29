@@ -8,6 +8,6 @@ spec:
     app: godemo
   ports:
   - nodePort: 31080
-    port: 28082
+    port: 8081
     protocol: TCP
   type: NodePort

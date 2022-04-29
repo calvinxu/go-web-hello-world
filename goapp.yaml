@@ -10,7 +10,7 @@ spec:
     - image: w22663/go-web-hello-world:v0.1
       name: goapp
       ports:
-        - containerPort: 28082
+        - containerPort: 8081
           name: http
           protocol: TCP
   tolerations:
