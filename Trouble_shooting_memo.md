@@ -119,7 +119,7 @@ below erro logs can be seen
 
 *Events:
   Type     Reason            Age                  From               Message
-  ----     ------            ----                 ----               -------
+
   <font color=red>Warning  FailedScheduling  75s (x3 over 2m31s)  default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/unreachable: }, that the pod didn't tolerate.*</font>
   
 In such case, I found the this related to the single cluster node set, and the master node(in my case the only one single node) is already tainted by the Kubernetes installation so that no user pods land on them until intentionally configured by the user to be placed on master nodes by adding tolerations for the taints, and this can be done by adding  tolerations for in the pod. It is by default cluster will not schedule Pods on the control-plane node for security reasons. If want to be able to schedule Pods on the control-plane node, for example for a single-machine Kubernetes cluster for development, run:
