@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: demo
+  description: An example deployment of a Backstage application.
+  annotations:
+    github.com/project-slug: calvinxu/go-web-hello-world
+spec:
+  type: service
+  owner: backstage/maintainers
+  lifecycle: experimental
